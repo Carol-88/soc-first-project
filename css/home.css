@@ -30,12 +30,11 @@ a:hover {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 1100px;
-    height: 650px; 
+    width: 100vh;
+    height: auto; 
     margin: auto;
     gap: 3rem;
     padding-top: 12rem;
-    position: relative; /* Añade esta línea para que actúe como contenedor de posicionamiento */
 }
 
 h1 {
@@ -58,14 +57,20 @@ p {
   color: var(--medium);
 }
 
+.image-container {
+  display: flex;
+}
+
 .card1 {
-    position: absolute;
-    top: 25px; /* Posición Y */
-    left: 700px; /* Posición X */
-    width: 190px; /* Ancho */
-    height: 216px; /* Altura */
-    z-index: 2; /* Asegura que card1 esté encima de otros elementos dentro de .hero */
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 350px;
 }
 
 .card2 {
+  position: absolute;
+  bottom: 0;
+    width: 300px;
+  height: 350px;
 }
