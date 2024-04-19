@@ -12,14 +12,60 @@ nav ul {
 }
 
 .nav-link.active {
-    color: var(--default); /* Asegúrate de que este color coincida con el color del hover */
+  color: var(
+    --default
+  ); /* Asegúrate de que este color coincida con el color del hover */
 }
 
-
 a {
-    color: var(--medium);
+  color: var(--medium);
 }
 
 a:hover {
-    color: var(--default);
+  color: var(--default);
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1100px;
+    height: 650px; 
+    margin: auto;
+    gap: 3rem;
+    padding-top: 12rem;
+    position: relative; /* Añade esta línea para que actúe como contenedor de posicionamiento */
+}
+
+h1 {
+  font-size: 60px;
+  color: var(--dark);
+}
+
+.row-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+}
+
+p {
+  text-align: start;
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--medium);
+}
+
+.card1 {
+    position: absolute;
+    top: 25px; /* Posición Y */
+    left: 700px; /* Posición X */
+    width: 190px; /* Ancho */
+    height: 216px; /* Altura */
+    z-index: 2; /* Asegura que card1 esté encima de otros elementos dentro de .hero */
+}
+
+.card2 {
 }
