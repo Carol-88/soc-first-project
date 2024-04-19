@@ -1,0 +1,49 @@
+:root {
+ --default: #072AC8;
+ --accent: #43D2FF;
+ --hover: #A2D6F9;
+ --tapped: #D1EDFF;
+ --dark: #292E47;
+ --medium: #6B708D;
+ --light: #F2F4FC;
+ --lightblue: #ECF7FF;
+ --secondary: #FFC600;
+ --font-family: 'Roboto', sans-serif;
+}
+
+body {
+ font-family: var(--font-family);
+}
+
+.button {
+ background-color: var(--default);
+ color: var(--light);
+}
+
+.button:hover {
+ background-color: var(--hover);
+}
+
+.button:active {
+ background-color: var(--tapped);
+}
+
+.dark-text {
+ color: var(--dark);
+}
+
+.medium-text {
+ color: var(--medium);
+}
+
+.light-background {
+ background-color: var(--light);
+}
+
+.lightblue-background {
+ background-color: var(--lightblue);
+}
+
+.secondary-text {
+ color: var(--secondary);
+}
