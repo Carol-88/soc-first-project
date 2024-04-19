@@ -11,6 +11,41 @@
  --font-family: 'Roboto', sans-serif;
 }
 
+/* Elimina los márgenes predeterminados para un mejor control en CSS autorizado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elimina los estilos de lista en ul, ol elementos con un atributo de clase, lo que sugiere que el estilo predeterminado será eliminado */
+ul[class], ol[class] {
+    list-style: none;
+}
+
+/* Establece alturas de línea más cortas en encabezados e interacciones */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+/* Asegura que los textareas sin un atributo de filas no sean demasiado pequeños */
+textarea {
+    resize: vertical;
+}
+
+/* Asegura que los elementos anclados tengan un margen de desplazamiento extra */
+a[href^="#"] {
+    scroll-margin-top: 70px; /* Ajusta este valor según sea necesario */
+}
+
+/* Elimina todas las animaciones y transiciones para aquellos que prefieren no verlas */
+* {
+    animation: none;
+    transition: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
 body {
  font-family: var(--font-family);
 }
@@ -18,10 +53,14 @@ body {
 .button {
  background-color: var(--default);
  color: var(--light);
+ padding: 1rem;
+ font-weight: bold;
 }
 
 .button:hover {
  background-color: var(--hover);
+ color: var(--dark);
+ font-weight: bold;
 }
 
 .button:active {

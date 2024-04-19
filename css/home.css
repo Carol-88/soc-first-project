@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link.active {
+    color: var(--default); /* Asegúrate de que este color coincida con el color del hover */
+}
+
+
+a {
+    color: var(--medium);
+}
+
+a:hover {
+    color: var(--default);
+}
