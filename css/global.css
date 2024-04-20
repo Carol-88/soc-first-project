@@ -49,6 +49,9 @@ a[href^="#"] {
 body {
  font-family: var(--font-family);
  background-color: var(--light);
+ height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+ display: flex; /* Usa flexbox para facilitar el diseño */
+ flex-direction: column; /* Organiza el contenido en una columna */
 }
 
 .button {
