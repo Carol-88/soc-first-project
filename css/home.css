@@ -175,12 +175,81 @@ padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la
  color: var(--secondary); /* Cambia el color del enlace al pasar el cursor */
 }
 
+/* Seccion Testimonials */
+.testimonial {
+    position: relative; /* Asegura que los emojis se posicionen en relación con este contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.testimonial .emojis {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial h2 {
+    text-align: center;
+}
+
+.testimonial p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonial .emojis .emoji-top-left ,
+.testimonial .emojis .emoji-top-right ,
+.testimonial .emojis .emoji-bottom-left ,
+.testimonial .emojis .emoji-bottom-right  {
+position: absolute;
+}
+
+.testimonial .emojis .emoji-top-left img,
+.testimonial .emojis .emoji-top-right img,
+.testimonial .emojis .emoji-bottom-left img,
+.testimonial .emojis .emoji-bottom-right img {
+    width: 100px; /* Asegura que el ancho de los emojis sea de 100px */
+    height: auto; /* Mantiene la proporción de los emojis */
+}
+
+.testimonial .emojis .emoji-top-left {
+    top: 0;
+    left: 0;
+}
+
+.testimonial .emojis .emoji-top-right {
+    top: 0;
+    right: 0;
+}
+
+.testimonial .emojis .emoji-bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.testimonial .emojis .emoji-bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+
+
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
+    padding: 7rem 2rem 2rem 2rem;
   }
 
   .image-container {
@@ -210,6 +279,10 @@ padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la
     height: auto; /* La altura se ajusta automáticamente */
     margin-bottom: 2rem; /* Añade un poco de espacio debajo de cada tarjeta en pantallas pequeñas */
  }
+
+ .testimonial .emojis {
+  display: none;
+ }
 }
 
 /* Media query para tamaños medios */
@@ -220,7 +293,7 @@ padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la
     flex-direction: column; /* Cambia la dirección a columna en tamaños medios */
     align-items: center; /* Centra los elementos horizontalmente */
     justify-content: center; /* Centra los elementos verticalmente */
-    padding: 7rem 2rem 2rem 2rem; /* Añade un poco de espacio arriba y abajo */
+    padding: 7rem 5rem 2rem 5rem; /* Añade un poco de espacio arriba y abajo */
     gap: 2rem; /* Ajusta el espacio entre los elementos */
  }
 
