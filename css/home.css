@@ -1,10 +1,18 @@
+/* Header */
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+ padding: 1rem;
+ position: fixed; /* Añadimos posición fija */
+ top: 0; /* Aseguramos que el encabezado esté en la parte superior de la pantalla */
+ left: 0; /* Aseguramos que el encabezado esté alineado a la izquierda */
+ right: 0; /* Aseguramos que el encabezado ocupe todo el ancho de la pantalla */
+ z-index: 1000; /* Aseguramos que el encabezado esté por encima del contenido */
+ background-color: var(--light); /* Añadimos un fondo para que el contenido no se vea a través del encabezado */
 }
+
 
 nav ul {
   display: flex;
@@ -14,7 +22,7 @@ nav ul {
 .nav-link.active {
   color: var(
     --default
-  ); /* Asegúrate de que este color coincida con el color del hover */
+  );
 }
 
 a {
@@ -25,20 +33,22 @@ a:hover {
   color: var(--default);
 }
 
+/* Section Hero */
 .hero {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Cambiamos a space-between para que los elementos se distribuyan mejor */
+    justify-content: space-between; 
     align-items: center;
-    width: 100%; /* Cambiamos a 100% para que ocupe todo el ancho disponible */
-    padding: 7rem 12rem; /* Añadimos un padding general para dar más espacio */
-    gap: 2rem; /* Reducimos el gap para que las imágenes estén más juntas en pantallas pequeñas */
+    width: 100%; 
+    padding: 7rem 12rem; 
+    gap: 2rem; 
 }
 
 .hero div {
-    flex: 1; /* Aseguramos que ambos divs tengan el mismo tamaño */
+    flex: 1; 
 }
 
+/* Section Hero, div content */
 .content {
   display: flex;
   flex-direction: column;
@@ -47,10 +57,12 @@ a:hover {
 
 h1 {
   font-size: 60px;
+  color: var(--dark);
 }
 
 p {
   font-size: 20px;
+  color: var(--medium);
 }
 
 .row-links {
@@ -61,16 +73,18 @@ p {
   padding-top: 1rem;
 }
 
+/* Section Hero, div image-container */
+
 .image-container {
-    position: relative; /* Aseguramos que las imágenes más pequeñas se posicionen en relación a este contenedor */
-    width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho disponible */
-    max-width: 570px; /* Establecemos un ancho máximo para que no se salga del diseño */
+    position: relative; 
+    width: 100%; 
+    max-width: 570px; 
 }
 
 .card1, .card2 {
     position: absolute;
-    width: 250px; /* Reducimos el tamaño para que sean más pequeñas y responsive */
-    height: 270px; /* Ajustamos el tamaño para que sean más pequeñas y responsive */
+    width: 250px;
+    height: 270px; 
 }
 
 .card1 {
@@ -86,16 +100,18 @@ p {
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column; /* Cambiamos a column para que los elementos se apilen verticalmente en pantallas pequeñas */
-        gap: 1rem; /* Reducimos el gap para que las imágenes estén más juntas en pantallas pequeñas */
+        flex-direction: column; 
+        gap: 1rem; 
     }
 
     .image-container {
-        display: none; /* Ocultamos el contenedor en pantallas pequeñas */
+        display: none;
     }
 
     .card1, .card2 {
-        display: none; /* Ocultamos las imágenes más pequeñas en pantallas pequeñas */
+        display: none; 
     }
+
+    
 }
 

@@ -48,6 +48,7 @@ a[href^="#"] {
 
 body {
  font-family: var(--font-family);
+ background-color: var(--light);
 }
 
 .button {
