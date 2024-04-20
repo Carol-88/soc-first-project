@@ -28,18 +28,29 @@ a:hover {
 .hero {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between; /* Cambiamos a space-between para que los elementos se distribuyan mejor */
     align-items: center;
-    width: 100vh;
-    height: auto; 
-    margin: auto;
-    gap: 3rem;
-    padding-top: 12rem;
+    width: 100%; /* Cambiamos a 100% para que ocupe todo el ancho disponible */
+    padding: 7rem 12rem; /* Añadimos un padding general para dar más espacio */
+    gap: 2rem; /* Reducimos el gap para que las imágenes estén más juntas en pantallas pequeñas */
+}
+
+.hero div {
+    flex: 1; /* Aseguramos que ambos divs tengan el mismo tamaño */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 h1 {
   font-size: 60px;
-  color: var(--dark);
+}
+
+p {
+  font-size: 20px;
 }
 
 .row-links {
@@ -50,27 +61,41 @@ h1 {
   padding-top: 1rem;
 }
 
-p {
-  text-align: start;
-  margin-top: 20px;
-  font-size: 20px;
-  color: var(--medium);
+.image-container {
+    position: relative; /* Aseguramos que las imágenes más pequeñas se posicionen en relación a este contenedor */
+    width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho disponible */
+    max-width: 570px; /* Establecemos un ancho máximo para que no se salga del diseño */
 }
 
-.image-container {
-  display: flex;
+.card1, .card2 {
+    position: absolute;
+    width: 250px; /* Reducimos el tamaño para que sean más pequeñas y responsive */
+    height: 270px; /* Ajustamos el tamaño para que sean más pequeñas y responsive */
 }
 
 .card1 {
-  position: absolute;
-  top: 0;
-  width: 300px;
-  height: 350px;
+    top: 0;
+    left: 0;
 }
 
 .card2 {
-  position: absolute;
-  bottom: 0;
-    width: 300px;
-  height: 350px;
+    bottom: -60px;
+    right: -79px;
 }
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Cambiamos a column para que los elementos se apilen verticalmente en pantallas pequeñas */
+        gap: 1rem; /* Reducimos el gap para que las imágenes estén más juntas en pantallas pequeñas */
+    }
+
+    .image-container {
+        display: none; /* Ocultamos el contenedor en pantallas pequeñas */
+    }
+
+    .card1, .card2 {
+        display: none; /* Ocultamos las imágenes más pequeñas en pantallas pequeñas */
+    }
+}
+
