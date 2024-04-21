@@ -319,13 +319,92 @@ position: absolute;
 }
 
 /* Section CTA */
-.bg-cta {
+
+.cta {
+   display: flex;
+   flex-direction: column;
    justify-content: center;
-  margin: 2rem;
-  height: 20%;
-      background-color: var(--secondary);
+   align-items: center;
 }
 
+.cta h3 {
+   font-size: 40px;
+}
+
+.cta p {
+   font-size: 20px;
+   color: var(--dark);
+   padding-bottom: 2rem;
+}
+
+.cta input {
+   padding: 1rem;
+}
+
+.bg-cta {
+  margin: 2rem;
+  height: 500px;
+  background-color: var(--secondary);
+}
+
+.subscribe .input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.subscribe .input {
+    padding-left: 40px; /* Ajusta este valor según el tamaño de tu imagen */
+    font-size: 16px; /* Asegúrate de que el tamaño del texto sea adecuado */
+}
+
+.subscribe .input-image {
+    position: absolute;
+    left: 10px; /* Ajusta este valor según sea necesario */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+}
+
+/* Section Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--light); /* Color de fondo del footer */
+    color: var(--medium); /* Color del texto */
+}
+
+.footer-column {
+    flex: 1; /* Asegura que cada columna ocupe un espacio igual */
+}
+
+.footer-column:first-child {
+    flex: 2; /* La primera columna ocupa la mitad del ancho */
+}
+
+.footer-logo {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+}
+
+.footer-address {
+    margin-top: 1rem;
+}
+
+.footer-links {
+    
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--medium);
+    text-decoration: none;
+}
 
 
 /* Media query para pantallas pequeñas */
