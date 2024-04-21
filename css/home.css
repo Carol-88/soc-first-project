@@ -134,7 +134,7 @@ p {
 .card {
  display: flex; /* Usa flexbox para organizar el contenido de la tarjeta */
  flex-direction: column; /* Organiza el contenido en una columna */
- align-items: center;
+ align-items: flex-start;
  justify-content: space-between; /* Alinea el contenido en el centro */
  width: 350px;
  height: 444px; /* Establece un ancho máximo para las tarjetas */
@@ -156,22 +156,22 @@ padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la
  padding: 0; /* Añade un poco de espacio debajo de la imagen */
 }
 
-.card h4 {
- margin-bottom: 0.5rem; /* Añade un poco de espacio debajo del título */
+.card h4, p, a {
+ margin: 1rem; /* Añade un poco de espacio debajo del título */
 }
 
-.card p {
- margin-bottom: 1rem; /* Añade un poco de espacio debajo del párrafo */
+h4 {
+   font-size: 24px;
 }
-
 .card a {
+   font-size: 17px;
  text-decoration: none; /* Elimina el subrayado del enlace */
- color: var(--primary); /* Usa el color primario para el enlace */
+ color: var(--default); /* Usa el color primario para el enlace */
  transition: color 0.3s ease; /* Añade una transición suave al color del enlace */
 }
 
 .card a:hover {
- color: var(--secondary); /* Cambia el color del enlace al pasar el cursor */
+ color: var(--hover); /* Cambia el color del enlace al pasar el cursor */
 }
 
 /* Seccion Testimonials */
@@ -185,12 +185,16 @@ padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la
 }
 
 .bg {
-   justify-content: center;
-  margin: 2rem;
-  height: 20%;
-      background-color: var(--dark);
+    display: flex; /* Añade display: flex; para permitir el uso de justify-content y align-items */
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    height: 20%; /* Asegúrate de que este valor sea el adecuado para tu diseño */
+    background-color: var(--dark);
     background-image: url(/public/testimonials/orbit.png);
-}
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+   }
 
 .testimonial .emojis {
     position: absolute;
@@ -209,21 +213,56 @@ padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    height: 100%; /* Asegura que ocupe todo el alto disponible */
+    height: 80%; /* Asegura que ocupe todo el alto disponible */
     position: relative; /* Asegura que esté posicionado en relación con .testimonial */
     z-index: 1; /* Asegura que esté por encima de los emojis */
 }
 
-.testimonial h2 {
+.user {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos horizontalmente */
+    gap: 1rem;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Alinea el título y el enlace verticalmente */
+    justify-content: flex-start; /* Ajusta el espacio entre el título y el enlace */
+    gap: 0.3rem;
+   }
+
+.user h4 {
+    font-size: 17px;
+    color: var(--hover);
+}
+
+.user a {
+    color: var(--light);
+    margin: 0;
+}
+
+.user img {
+    object-fit: fill;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
+
+.testimonial h3 {
     text-align: center;
+    color: var(--white);
+    font-size: 40px;
 }
 
 .testimonial p {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
+    color:var(--secondary);
+    font-size: medium;
 }
 
 .testimonial .emojis .emoji-top-left ,
