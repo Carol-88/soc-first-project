@@ -126,13 +126,12 @@ p {
  justify-content: center; /* Centra las tarjetas horizontalmente */
  align-items: center; /* Alinea las tarjetas verticalmente en el centro */
  gap: 3rem; /* Añade un espacio de 3 rems entre las tarjetas */
- padding: 2rem 2rem; /* Añade un poco de espacio arriba y abajo */
- background-color: var(--light); /* Usa un color de fondo claro para resaltar las tarjetas */
+ padding: 2rem 2rem; /* Añade un poco de espacio arriba y abajo */ /* Usa un color de fondo claro para resaltar las tarjetas */
  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
  padding: 2rem 2rem; /* Añade un padding de 2 rems a la derecha e izquierda */
 }
 
-.card-project {
+.card {
  display: flex; /* Usa flexbox para organizar el contenido de la tarjeta */
  flex-direction: column; /* Organiza el contenido en una columna */
  align-items: center;
@@ -145,11 +144,11 @@ padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la
  transition: transform 0.3s ease; /* Añade una transición suave al transformar la tarjeta */
 }
 
-.card-project:hover {
+.card:hover {
  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba al pasar el cursor */
 }
 
-.card-project img {
+.card img {
  width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
  height: auto; /* Mantiene la proporción de la imagen */
  object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible sin distorsionarse */
@@ -157,21 +156,21 @@ padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la
  padding: 0; /* Añade un poco de espacio debajo de la imagen */
 }
 
-.card-project h4 {
+.card h4 {
  margin-bottom: 0.5rem; /* Añade un poco de espacio debajo del título */
 }
 
-.card-project p {
+.card p {
  margin-bottom: 1rem; /* Añade un poco de espacio debajo del párrafo */
 }
 
-.card-project a {
+.card a {
  text-decoration: none; /* Elimina el subrayado del enlace */
  color: var(--primary); /* Usa el color primario para el enlace */
  transition: color 0.3s ease; /* Añade una transición suave al color del enlace */
 }
 
-.card-project a:hover {
+.card a:hover {
  color: var(--secondary); /* Cambia el color del enlace al pasar el cursor */
 }
 
@@ -185,13 +184,36 @@ padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la
     padding: 2rem;
 }
 
+.bg {
+  margin: 2rem;
+  width: 100%;
+  height: 20%;
+      background-color: var(--dark);
+    background-image: url(/public/testimonials/orbit.png);
+}
+
 .testimonial .emojis {
     position: absolute;
-    width: 80%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite que los emojis se ajusten en diferentes filas si es necesario */
+}
+
+.testimonial .content-testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    height: 100%; /* Asegura que ocupe todo el alto disponible */
+    position: relative; /* Asegura que esté posicionado en relación con .testimonial */
+    z-index: 1; /* Asegura que esté por encima de los emojis */
 }
 
 .testimonial h2 {
@@ -239,6 +261,23 @@ position: absolute;
     right: 0;
 }
 
+/* Seccion Services */
+
+.services {
+   display: flex; /* Usa flexbox para alinear las tarjetas horizontalmente */
+ justify-content: center; /* Centra las tarjetas horizontalmente */
+ align-items: center; /* Alinea las tarjetas verticalmente en el centro */
+ gap: 3rem; /* Añade un espacio de 3 rems entre las tarjetas */
+ padding: 2rem 2rem; /* Añade un poco de espacio arriba y abajo */ /* Usa un color de fondo claro para resaltar las tarjetas */
+ flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
+ padding: 2rem 2rem;
+}
+
+.services img {
+  border-radius: 100%;
+  width: 70px;
+  background-color: var(--lightblue);
+}
 
 
 
