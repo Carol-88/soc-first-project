@@ -84,65 +84,7 @@ p {
   filter: grayscale(100%);
 }
 
-/* Seccion Projects */
-.projects {
-  display: flex; /* Usa flexbox para alinear las tarjetas horizontalmente */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
-  align-items: center; /* Alinea las tarjetas verticalmente en el centro */
-  gap: 3rem; /* Añade un espacio de 3 rems entre las tarjetas */
-  padding: 2rem 2rem; /* Añade un poco de espacio arriba y abajo */ /* Usa un color de fondo claro para resaltar las tarjetas */
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
-  padding: 2rem 2rem; /* Añade un padding de 2 rems a la derecha e izquierda */
-}
 
-.card {
-  display: flex; /* Usa flexbox para organizar el contenido de la tarjeta */
-  flex-direction: column; /* Organiza el contenido en una columna */
-  align-items: flex-start;
-  justify-content: space-between; /* Alinea el contenido en el centro */
-  width: 350px;
-  height: 444px; /* Establece un ancho máximo para las tarjetas */
-  padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la tarjeta */
-  background-color: var(
-    --white
-  ); /* Usa un color de fondo blanco para las tarjetas */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra suave a las tarjetas */
-  transition: transform 0.3s ease; /* Añade una transición suave al transformar la tarjeta */
-}
-
-.card:hover {
-  transform: translateY(
-    -10px
-  ); /* Mueve la tarjeta hacia arriba al pasar el cursor */
-}
-
-.card img {
-  width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
-  height: auto; /* Mantiene la proporción de la imagen */
-  object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible sin distorsionarse */
-  margin-bottom: 1rem;
-  padding: 0; /* Añade un poco de espacio debajo de la imagen */
-}
-
-.card h4,
-p,
-a {
-  margin: 1rem; /* Añade un poco de espacio debajo del título */
-}
-
-h4 {
-  font-size: 24px;
-}
-.card a {
-  font-size: 17px;
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  color: var(--default); /* Usa el color primario para el enlace */
-  transition: color 0.3s ease; /* Añade una transición suave al color del enlace */
-}
-
-.card a:hover {
-  color: var(--hover); /* Cambia el color del enlace al pasar el cursor */
-}
 
 /* Seccion Testimonials */
 .testimonial {
@@ -287,54 +229,7 @@ h4 {
   background-color: var(--lightblue);
 }
 
-/* Section CTA */
 
-.cta {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.cta h3 {
-  font-size: 40px;
-  text-align: center;
-}
-
-.cta p {
-  font-size: 20px;
-  color: var(--dark);
-  padding-bottom: 2rem;
-}
-
-.cta input {
-  padding: 1rem;
-}
-
-.bg-cta {
-  margin: 2rem;
-  height: 500px;
-  background-color: var(--secondary);
-}
-
-.subscribe .input-container {
-  position: relative;
-  display: inline-block;
-}
-
-.subscribe .input {
-  padding-left: 40px;
-  font-size: 16px; /* Asegúrate de que el tamaño del texto sea adecuado */
-}
-
-.subscribe .input-image {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: auto;
-}
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -361,30 +256,13 @@ h4 {
     gap: 2rem;
   }
 
-  .projects {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .card-project {
-    width: 70%;
-    height: auto;
-    margin-bottom: 2rem;
-  }
+  
 
   .testimonial .emojis {
     display: none;
   }
 
-  .subscribe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    gap: 20px;
-  }
+
 }
 
 /* Media query para tamaños medios */
@@ -423,26 +301,14 @@ h4 {
     right: 0;
   }
 
-  .clients,
-  .projects {
-    display: flex;
+  .clients{
+      display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
     gap: 2rem;
-  }
-
-  .client-logos,
-  .projects {
-    gap: 2rem;
-  }
-
-  .card-project {
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-  }
+}
 }
 
 /* Media query para pantallas grandes */
