@@ -32,6 +32,13 @@ a:hover {
   color: var(--default);
 }
 
+.hamburger { /* Muestra el menú hamburguesa en pantallas pequeñas */
+ position: absolute; /* Posiciona el menú hamburguesa absolutamente */
+ top: 1rem; /* Ajusta la posición vertical del menú hamburguesa */
+ right: 1rem; /* Ajusta la posición horizontal del menú hamburguesa a la derecha */
+ cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el menú hamburguesa */
+}
+
 /* Section Hero */
 .hero {
   display: flex;
@@ -329,6 +336,7 @@ position: absolute;
 
 .cta h3 {
    font-size: 40px;
+   text-align: center;
 }
 
 .cta p {
@@ -353,16 +361,16 @@ position: absolute;
 }
 
 .subscribe .input {
-    padding-left: 40px; /* Ajusta este valor según el tamaño de tu imagen */
+    padding-left: 40px;
     font-size: 16px; /* Asegúrate de que el tamaño del texto sea adecuado */
 }
 
 .subscribe .input-image {
     position: absolute;
-    left: 10px; /* Ajusta este valor según sea necesario */
+    left: 10px; 
     top: 50%;
     transform: translateY(-50%);
-    width: 20px; /* Ajusta el tamaño de la imagen según sea necesario */
+    width: 20px;
     height: auto;
 }
 
@@ -370,35 +378,39 @@ position: absolute;
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
-    background-color: var(--light); /* Color de fondo del footer */
-    color: var(--medium); /* Color del texto */
+    padding: 2rem 7rem;
+    background-color: var(--light); 
+    color: var(--medium); 
 }
 
-.footer-column {
-    flex: 1; /* Asegura que cada columna ocupe un espacio igual */
-}
-
-.footer-column:first-child {
-    flex: 2; /* La primera columna ocupa la mitad del ancho */
+.footer-laptop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
 }
 
 .footer-logo {
-    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    width: 100px; 
     height: auto;
+    margin-top: 3rem;
 }
 
 .footer-address {
     margin-top: 1rem;
+    font-size: 17px;
+    margin: 10px 0;
 }
 
 .footer-links {
-    
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-links li {
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0; 
 }
 
 .footer-links a {
@@ -406,9 +418,15 @@ position: absolute;
     text-decoration: none;
 }
 
+.footer-links a:hover {
+    color: var(--default);
+}
+
+
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
+
   .hero {
     flex-direction: column;
     justify-content: center;
@@ -433,33 +451,108 @@ position: absolute;
   }
 
  .projects {
-    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    flex-direction: column; 
     align-items: center;
-    justify-content: center; /* Centra las tarjetas verticalmente */
-    gap: 2rem; /* Aumenta el espacio entre las tarjetas en pantallas pequeñas */
+    justify-content: center; 
+    gap: 2rem; 
  }
 
  .card-project {
-    width: 70%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
-    height: auto; /* La altura se ajusta automáticamente */
-    margin-bottom: 2rem; /* Añade un poco de espacio debajo de cada tarjeta en pantallas pequeñas */
+    width: 70%; 
+    height: auto; 
+    margin-bottom: 2rem; 
  }
 
  .testimonial .emojis {
   display: none;
  }
+
+ .subscribe {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 20px;
+   gap: 20px;
+ }
+
+.footer-details {
+   display: block;
 }
+
+.footer-laptop{
+   display: none;
+}
+
+ .footer {
+    flex-direction: column; 
+    align-items: center; 
+    padding: 2rem;
+    justify-content: space-around;
+ }
+
+ .footer div {
+   width: 50%;
+ }
+
+ .footer-column {
+    flex: none; 
+ }
+
+ .footer-column:first-child {
+    flex: none; 
+ }
+
+ .footer-logo {
+    margin-top: 1rem; 
+ }
+
+ .footer-address,
+ .footer-links {
+    margin-top: 0.5rem; 
+ }
+
+ /* Cambios en el navbar */
+ #nav {
+    display: none; 
+ }
+ header button {
+   display: none;
+ }
+
+ .hamburger {
+    display: block;
+ }
+
+/* Estilos para el menú de navegación cuando está activo */
+#nav.active {
+ display: block; 
+ position: absolute;
+ top: 100%;
+ left: 0; 
+ right: 0; 
+ background-color: var(--light); 
+ padding: 1rem; 
+}
+
+
+ .hamburger-menu.active ul li {
+    margin: 0.5rem 0; 
+ }
+}
+
+
+
 
 /* Media query para tamaños medios */
 @media (min-width: 769px) and (max-width: 1024px) {
 
  .hero {
     display: flex;
-    flex-direction: column; /* Cambia la dirección a columna en tamaños medios */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    padding: 7rem 5rem 2rem 5rem; /* Añade un poco de espacio arriba y abajo */
-    gap: 2rem; /* Ajusta el espacio entre los elementos */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    padding: 7rem 5rem 2rem 5rem; 
+    gap: 2rem; 
  }
 
  .hero div {
@@ -473,8 +566,8 @@ position: absolute;
  .card1,
  .card2 {
     position: absolute;
-    width: 100%; /* Ajusta el ancho para que se ajuste al contenedor */
-    height: auto; /* Ajusta la altura automáticamente */
+    width: 100%; 
+    height: auto; 
  }
 
  .card1 {
@@ -490,38 +583,58 @@ position: absolute;
  .clients,
  .projects {
     display: flex;
-    flex-direction: column; /* Asegura que las tarjetas estén en una columna */
-    align-items: center; /* Centra las tarjetas horizontalmente */
-    justify-content: center; /* Centra las tarjetas verticalmente */
-    padding: 2rem 0; /* Añade un poco de espacio arriba y abajo */
-    gap: 2rem; /* Ajusta el espacio entre las tarjetas */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 2rem 0; 
+    gap: 2rem; 
  }
 
  .client-logos,
  .projects {
-    gap: 2rem; /* Ajusta el espacio entre los elementos */
+    gap: 2rem; 
  }
 
  .card-project {
-    width: 100%; /* Las tarjetas ocupan todo el ancho disponible */
-    height: auto; /* La altura se ajusta automáticamente */
-    margin-bottom: 2rem; /* Añade un poco de espacio debajo de cada tarjeta */
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 2rem;
  }
+
+ .footer-details {
+   display: none;
+ }
+
+ .hamburger {
+   display: none;
+ }
+
+
 }
 
 /* Media query para pantallas grandes */
 @media (min-width: 1025px) {
  .projects {
-    flex-direction: row; /* Cambia la dirección a fila en pantallas grandes */
-    align-items: center; /* Alinea las tarjetas verticalmente en el centro */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    gap: 3rem; /* Añade un espacio de 3 rems entre las tarjetas */
-    padding: 2rem 2rem; /* Añade un padding de 2 rems a la derecha e izquierda */
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 3rem; 
+    padding: 2rem 2rem; 
  }
 
  .card-project {
-    width: 350px; /* Establece un ancho de 350px para las tarjetas en pantallas grandes */
-    height: 444px; /* Establece una altura de 444px para las tarjetas en pantallas grandes */
-    margin-bottom: 0; /* Elimina el espacio debajo de cada tarjeta en pantallas grandes */
+    width: 350px; 
+    height: 444px; 
+    margin-bottom: 0; 
  }
+
+ .footer-details
+ {
+display: none;
+ }
+
+ .hamburger {
+   display: none;
+ }
+
 }

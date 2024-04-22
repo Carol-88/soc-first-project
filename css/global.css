@@ -60,6 +60,7 @@ body {
  color: var(--light);
  padding: 1rem;
  font-weight: bold;
+ width: max-content;
 }
 
 .button:hover {

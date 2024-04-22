@@ -6,4 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+document.querySelector('.hamburger').addEventListener('click', function() {
+ document.getElementById('nav').classList.toggle('active');
 });
+});
+
+
+
