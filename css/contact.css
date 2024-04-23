@@ -39,11 +39,17 @@ input, textarea {
     height: 50px;
     background-color: #E6E9F1;
     color: var(--dark);
+    border: 0;
 }
 
 textarea {
     height: 200px;
 }
+
+input::placeholder, textarea::placeholder {
+    padding-left: 10px; 
+}
+
 
 .button {
     width: 100%;
