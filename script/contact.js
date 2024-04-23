@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
 
          
-          if (phone && !/^\d{10}$/.test(phone)) {
+          if (phone && !/^\d{9}$/.test(phone)) {
             alert('Please enter a valid phone number.');
             return;
           }
