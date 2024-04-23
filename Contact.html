@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/contact.css">
-</head>
-<body>
-
-     <header>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+  </head>
+  <body>
+    <header>
       <img src="./public/logos/circle.svg" alt="logo circle" />
       <nav>
         <div class="hamburger">&#9776;</div>
@@ -27,7 +29,54 @@
     </header>
 
     <main>
-         <footer class="footer">
+      <section class="sec-form">
+        <h1>Contact Us</h1>
+        <form>
+          <div>
+            <label for="full-name">Full Name *</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="div-row">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-zinc-700"
+                >Phone</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="mt-1 block w-full px-3 py-2 border border-zinc-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                placeholder="Enter your phone number"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Write your message here..."
+            ></textarea>
+          </div>
+
+          <div>
+            <button type="submit" class="button">Submit</button>
+          </div>
+        </form>
+      </section>
+      <footer class="footer">
         <div class="footer-column">
           <img src="public/logos/circle.svg" alt="Logo" class="footer-logo" />
           <p class="footer-address">
@@ -70,6 +119,5 @@
         </div>
       </footer>
     </main>
-    
-</body>
+  </body>
 </html>
