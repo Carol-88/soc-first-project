@@ -167,7 +167,6 @@ a:hover {
 }
 
 .bg-cta {
-  margin: 2rem;
   height: 500px;
   background-color: var(--secondary);
 }
