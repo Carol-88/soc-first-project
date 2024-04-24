@@ -1,3 +1,6 @@
+body {
+  width: 100%;
+}
 /* Section Hero */
 .hero {
   display: flex;
@@ -214,21 +217,38 @@ p {
 /* Seccion Services */
 
 .services {
-  display: flex; /* Usa flexbox para alinear las tarjetas horizontalmente */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
-  align-items: center; /* Alinea las tarjetas verticalmente en el centro */
-  gap: 3rem; /* Añade un espacio de 3 rems entre las tarjetas */
-  padding: 2rem 2rem; /* Añade un poco de espacio arriba y abajo */ /* Usa un color de fondo claro para resaltar las tarjetas */
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
-  padding: 2rem 2rem;
+  display: flex; 
+  flex-direction: column;
+  gap: 3rem; 
+  padding: 2rem 2rem; 
+  flex-wrap: wrap;
 }
 
-.services img {
-  border-radius: 100%;
-  width: 70px;
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
+
+.services .card {
+  justify-content: center;
+
+}
+
+.img-services {
+    background-color: var(--lightblue);
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+}
+.img-services img {
   background-color: var(--lightblue);
 }
-
 
 
 /* Media query para pantallas pequeñas */

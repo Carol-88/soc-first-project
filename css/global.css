@@ -14,9 +14,10 @@
 
 /* Elimina los márgenes predeterminados para un mejor control en CSS autorizado */
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  max-width: 1200px;
 }
 
 /* Elimina los estilos de lista en ul, ol elementos con un atributo de clase, lo que sugiere que el estilo predeterminado será eliminado */
@@ -196,10 +197,7 @@ a:hover {
   flex-direction: row; /* Usa flexbox para alinear las tarjetas horizontalmente */
   justify-content: center; /* Centra las tarjetas horizontalmente */
   align-items: center; /* Alinea las tarjetas verticalmente en el centro */
-  gap: 3rem; /* Añade un espacio de 3 rems entre las tarjetas */
-  padding: 2rem 2rem; /* Añade un poco de espacio arriba y abajo */ /* Usa un color de fondo claro para resaltar las tarjetas */
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
-  padding: 2rem 2rem; /* Añade un padding de 2 rems a la derecha e izquierda */
+  flex-wrap: wrap; 
 }
 
 .card {
@@ -223,12 +221,10 @@ a:hover {
   ); /* Mueve la tarjeta hacia arriba al pasar el cursor */
 }
 
-.card img {
-  width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
-  height: auto; /* Mantiene la proporción de la imagen */
-  object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible sin distorsionarse */
-  margin-bottom: 1rem;
-  padding: 0; /* Añade un poco de espacio debajo de la imagen */
+.projects .card img {
+    display: inline;
+    width: 100%;
+    height: 200px;
 }
 
 .card h4,
@@ -251,6 +247,12 @@ h4 {
   color: var(--hover); /* Cambia el color del enlace al pasar el cursor */
 }
 
+.project-cards {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
 
 /* Footer */
 .footer {
@@ -395,7 +397,6 @@ h4 {
 
   .projects {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
