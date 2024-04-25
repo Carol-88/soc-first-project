@@ -14,10 +14,10 @@
 
 /* Elimina los márgenes predeterminados para un mejor control en CSS autorizado */
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1200px;
+ 
 }
 
 /* Elimina los estilos de lista en ul, ol elementos con un atributo de clase, lo que sugiere que el estilo predeterminado será eliminado */
@@ -41,10 +41,7 @@ textarea {
   resize: vertical;
 }
 
-/* Asegura que los elementos anclados tengan un margen de desplazamiento extra */
-a[href^="#"] {
-  scroll-margin-top: 70px; /* Ajusta este valor según sea necesario */
-}
+
 
 /* Elimina todas las animaciones y transiciones para aquellos que prefieren no verlas */
 * {
@@ -57,9 +54,12 @@ a[href^="#"] {
 body {
   font-family: var(--font-family);
   background-color: var(--light);
-  height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
   display: flex; /* Usa flexbox para facilitar el diseño */
   flex-direction: column; /* Organiza el contenido en una columna */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .button {
@@ -113,12 +113,16 @@ header {
 }
 
 header img {
-  margin:0;
+  margin: 0;
 }
 
 nav ul {
   display: flex;
   gap: 1rem;
+}
+
+nav {
+display: block;
 }
 
 .nav-link.active {
@@ -134,11 +138,8 @@ a:hover {
 }
 
 .hamburger {
-  /* Muestra el menú hamburguesa en pantallas pequeñas */
-  position: absolute; /* Posiciona el menú hamburguesa absolutamente */
-  top: 1rem; /* Ajusta la posición vertical del menú hamburguesa */
-  right: 1rem; /* Ajusta la posición horizontal del menú hamburguesa a la derecha */
-  cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el menú hamburguesa */
+  cursor: pointer;
+order: 3;
 }
 
 /* Section CTA */
@@ -195,7 +196,7 @@ a:hover {
   flex-direction: row; /* Usa flexbox para alinear las tarjetas horizontalmente */
   justify-content: center; /* Centra las tarjetas horizontalmente */
   align-items: center; /* Alinea las tarjetas verticalmente en el centro */
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   padding: 8rem 2rem;
 }
 
@@ -221,9 +222,9 @@ a:hover {
 }
 
 .projects .card img {
-    display: inline;
-    width: 100%;
-    height: 200px;
+  display: inline;
+  width: 100%;
+  height: 200px;
 }
 
 .card h4,
@@ -248,9 +249,9 @@ h4 {
 
 .project-cards {
   display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 /* Footer */
@@ -311,11 +312,11 @@ h4 {
 }
 
 @media (max-width: 768px) {
-  #nav {
+  nav {
     display: none;
   }
-  header button {
-    display: none;
+  header  {
+   justify-content: space-between;
   }
 
   .hamburger {
@@ -336,7 +337,7 @@ h4 {
     margin: 0.5rem 0;
   }
 
-    .subscribe {
+  .subscribe {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -394,14 +395,12 @@ h4 {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
- 
-  
   .footer-details {
     display: block;
     align-self: center;
   }
 
-  .footer-laptop{
+  .footer-laptop {
     display: none;
   }
 
@@ -438,7 +437,7 @@ h4 {
     display: none;
   }
 
-   .projects {
+  .projects {
     flex-direction: row;
     align-items: center;
     justify-content: center;
