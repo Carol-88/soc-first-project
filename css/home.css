@@ -75,7 +75,7 @@ p {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 5rem;
   padding: 0 1rem;
 }
 
@@ -126,6 +126,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  gap: 2rem;
   width: 100%; /* Asegura que ocupe todo el ancho disponible */
   height: 80%; /* Asegura que ocupe todo el alto disponible */
   position: relative; /* Asegura que esté posicionado en relación con .testimonial */
@@ -213,13 +214,6 @@ p {
 
 /* Seccion Services */
 
-.services {
-  display: flex; 
-  flex-direction: column;
-  gap: 3rem; 
-  padding: 8rem 2rem; 
-  flex-wrap: wrap;
-}
 
 .services-cards {
   display: flex;
@@ -229,7 +223,7 @@ p {
 }
 
 .services h2 {
-  margin: 0;
+  margin: 2rem;
   font-size:40px ;
 }
 
@@ -268,6 +262,10 @@ p {
   .card1,
   .card2 {
     display: none;
+  }
+
+  .clients {
+    padding: 0;
   }
 
   .client-logos {

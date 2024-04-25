@@ -125,6 +125,8 @@ nav {
 display: block;
 }
 
+
+
 .nav-link.active {
   color: var(--default);
 }
@@ -192,12 +194,15 @@ order: 3;
 
 /* Seccion Projects */
 .projects {
-  display: flex;
-  flex-direction: row; /* Usa flexbox para alinear las tarjetas horizontalmente */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
-  align-items: center; /* Alinea las tarjetas verticalmente en el centro */
-  flex-wrap: wrap;
-  padding: 8rem 2rem;
+    display: flex;
+    gap: 3rem;
+    padding: 8rem 2rem;
+    flex-wrap: wrap;
+}
+
+.projects h2 {
+      margin: 2rem;
+    font-size: 40px;
 }
 
 .card {
@@ -252,6 +257,13 @@ h4 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+}
+
+.services {
+      display: flex;
+    gap: 3rem;
+    padding: 8rem 2rem;
+    flex-wrap: wrap;
 }
 
 /* Footer */
@@ -316,7 +328,7 @@ h4 {
     display: none;
   }
   header  {
-   justify-content: space-between;
+   justify-content: space-around;
   }
 
   .hamburger {
@@ -350,6 +362,7 @@ h4 {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    padding: 5rem;
   }
 
   .card-project {
@@ -358,6 +371,13 @@ h4 {
     margin-bottom: 2rem;
   }
 
+  .services {
+    flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 5rem;
+  }
   .footer-details {
     display: block;
   }
@@ -411,8 +431,7 @@ h4 {
   .projects {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
+    padding: 2rem;
     gap: 2rem;
   }
 
@@ -435,14 +454,6 @@ h4 {
 
   .hamburger {
     display: none;
-  }
-
-  .projects {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    padding: 8rem 2rem;
   }
 
   .card-project {
