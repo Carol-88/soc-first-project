@@ -71,13 +71,8 @@ body {
 }
 
 .button:hover {
-  background-color: var(--hover);
-  color: var(--dark);
+  color: var(--secondary);
   font-weight: bold;
-}
-
-.button:active {
-  background-color: var(--tapped);
 }
 
 .dark-text {
@@ -115,6 +110,10 @@ header {
   background-color: var(
     --light
   ); /* Añadimos un fondo para que el contenido no se vea a través del encabezado */
+}
+
+header img {
+  margin:0;
 }
 
 nav ul {
@@ -197,6 +196,7 @@ a:hover {
   justify-content: center; /* Centra las tarjetas horizontalmente */
   align-items: center; /* Alinea las tarjetas verticalmente en el centro */
   flex-wrap: wrap; 
+  padding: 8rem 2rem;
 }
 
 .card {
@@ -257,9 +257,18 @@ h4 {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 7rem;
+  padding: 8rem 0 2rem 0;
   background-color: var(--light);
   color: var(--medium);
+}
+
+.firstcolumn {
+  width: 50%;
+  align-items: center;
+}
+
+.footer-column li {
+  padding: 2rem;
 }
 
 .footer-laptop {
@@ -299,6 +308,10 @@ h4 {
 
 .footer-links a:hover {
   color: var(--default);
+}
+
+.footer-column  {
+
 }
 
 @media (max-width: 768px) {
@@ -428,7 +441,7 @@ h4 {
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    padding: 2rem 2rem;
+    padding: 8rem 2rem;
   }
 
   .card-project {
