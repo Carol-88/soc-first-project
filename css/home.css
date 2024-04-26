@@ -1,4 +1,3 @@
-
 /* Section Hero */
 .hero {
   display: flex;
@@ -85,11 +84,9 @@ p {
   filter: grayscale(100%);
 }
 
-
-
 /* Seccion Testimonials */
 .testimonial {
-  position: relative; /* Asegura que los emojis se posicionen en relación con este contenedor */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,14 +95,14 @@ p {
 }
 
 .bg {
-  display: flex; /* Añade display: flex; para permitir el uso de justify-content y align-items */
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 20%; /* Asegúrate de que este valor sea el adecuado para tu diseño */
+  height: 20%;
   background-color: var(--dark);
   background-image: url(/public/testimonials/orbit.png);
-  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-  background-position: center; /* Centra la imagen de fondo */
+  background-size: cover;
+  background-position: center;
 }
 
 .testimonial .emojis {
@@ -118,7 +115,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Permite que los emojis se ajusten en diferentes filas si es necesario */
+  flex-wrap: wrap;
 }
 
 .testimonial .content-testimonial {
@@ -127,22 +124,22 @@ p {
   align-items: center;
   justify-content: space-around;
   gap: 2rem;
-  width: 100%; /* Asegura que ocupe todo el ancho disponible */
-  height: 80%; /* Asegura que ocupe todo el alto disponible */
-  position: relative; /* Asegura que esté posicionado en relación con .testimonial */
-  z-index: 1; /* Asegura que esté por encima de los emojis */
+  width: 100%;
+  height: 80%;
+  position: relative;
+  z-index: 1;
 }
 
 .user {
   display: flex;
-  flex-direction: row; /* Alinea los elementos horizontalmente */
+  flex-direction: row;
   gap: 1rem;
 }
 
 .user-info {
   display: flex;
-  flex-direction: column; /* Alinea el título y el enlace verticalmente */
-  justify-content: flex-start; /* Ajusta el espacio entre el título y el enlace */
+  flex-direction: column;
+  justify-content: flex-start;
   gap: 0.3rem;
 }
 
@@ -188,8 +185,8 @@ p {
 .testimonial .emojis .emoji-top-right img,
 .testimonial .emojis .emoji-bottom-left img,
 .testimonial .emojis .emoji-bottom-right img {
-  width: 100px; /* Asegura que el ancho de los emojis sea de 100px */
-  height: auto; /* Mantiene la proporción de los emojis */
+  width: 100px;
+  height: auto;
 }
 
 .testimonial .emojis .emoji-top-left {
@@ -214,7 +211,6 @@ p {
 
 /* Seccion Services */
 
-
 .services-cards {
   display: flex;
   flex-wrap: wrap;
@@ -224,26 +220,24 @@ p {
 
 .services h2 {
   margin: 2rem;
-  font-size:40px ;
+  font-size: 40px;
 }
 
 .services .card {
   justify-content: center;
-
 }
 
 .img-services {
-    background-color: var(--lightblue);
-    border-radius: 50%;
-    padding: 10px;
-    margin: 10px;
-    width: 60px;
-    height: 60px;
+  background-color: var(--lightblue);
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+  width: 60px;
+  height: 60px;
 }
 .img-services img {
   background-color: var(--lightblue);
 }
-
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -274,13 +268,9 @@ p {
     gap: 2rem;
   }
 
-  
-
   .testimonial .emojis {
     display: none;
   }
-
-
 }
 
 /* Media query para tamaños medios */
@@ -295,7 +285,7 @@ p {
   }
 
   .hero div {
-    flex: 1; /* Asegura que los elementos ocupen todo el espacio disponible */
+    flex: 1;
   }
 
   .image-container {
@@ -319,12 +309,12 @@ p {
     right: 0;
   }
 
-  .clients{
-      display: flex;
+  .clients {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
     gap: 2rem;
-}
+  }
 }

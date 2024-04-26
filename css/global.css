@@ -12,21 +12,17 @@
   --font-family: "Roboto", sans-serif;
 }
 
-/* Elimina los márgenes predeterminados para un mejor control en CSS autorizado */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 
-/* Elimina los estilos de lista en ul, ol elementos con un atributo de clase, lo que sugiere que el estilo predeterminado será eliminado */
 ul[class],
 ol[class] {
   list-style: none;
 }
 
-/* Establece alturas de línea más cortas en encabezados e interacciones */
 h1,
 h2,
 h3,
@@ -36,14 +32,10 @@ h6 {
   line-height: 1.2;
 }
 
-/* Asegura que los textareas sin un atributo de filas no sean demasiado pequeños */
 textarea {
   resize: vertical;
 }
 
-
-
-/* Elimina todas las animaciones y transiciones para aquellos que prefieren no verlas */
 * {
   animation: none;
   transition: none;
@@ -54,9 +46,9 @@ textarea {
 body {
   font-family: var(--font-family);
   background-color: var(--light);
-  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
-  display: flex; /* Usa flexbox para facilitar el diseño */
-  flex-direction: column; /* Organiza el contenido en una columna */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -102,14 +94,12 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 1rem;
-  position: fixed; /* Añadimos posición fija */
-  top: 0; /* Aseguramos que el encabezado esté en la parte superior de la pantalla */
-  left: 0; /* Aseguramos que el encabezado esté alineado a la izquierda */
-  right: 0; /* Aseguramos que el encabezado ocupe todo el ancho de la pantalla */
-  z-index: 1000; /* Aseguramos que el encabezado esté por encima del contenido */
-  background-color: var(
-    --light
-  ); /* Añadimos un fondo para que el contenido no se vea a través del encabezado */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--light);
 }
 
 header img {
@@ -122,10 +112,8 @@ nav ul {
 }
 
 nav {
-display: block;
+  display: block;
 }
-
-
 
 .nav-link.active {
   color: var(--default);
@@ -141,7 +129,7 @@ a:hover {
 
 .hamburger {
   cursor: pointer;
-order: 3;
+  order: 3;
 }
 
 /* Section CTA */
@@ -180,7 +168,7 @@ order: 3;
 
 .subscribe .input {
   padding-left: 40px;
-  font-size: 16px; /* Asegúrate de que el tamaño del texto sea adecuado */
+  font-size: 16px;
 }
 
 .subscribe .input-image {
@@ -194,36 +182,32 @@ order: 3;
 
 /* Seccion Projects */
 .projects {
-    display: flex;
-    gap: 3rem;
-    padding: 8rem 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 3rem;
+  padding: 8rem 2rem;
+  flex-wrap: wrap;
 }
 
 .projects h2 {
-      margin: 2rem;
-    font-size: 40px;
+  margin: 2rem;
+  font-size: 40px;
 }
 
 .card {
-  display: flex; /* Usa flexbox para organizar el contenido de la tarjeta */
-  flex-direction: column; /* Organiza el contenido en una columna */
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between; /* Alinea el contenido en el centro */
+  justify-content: space-between;
   width: 350px;
-  height: 444px; /* Establece un ancho máximo para las tarjetas */
-  padding-bottom: 1rem; /* Añade un poco de espacio alrededor del contenido de la tarjeta */
-  background-color: var(
-    --white
-  ); /* Usa un color de fondo blanco para las tarjetas */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra suave a las tarjetas */
-  transition: transform 0.3s ease; /* Añade una transición suave al transformar la tarjeta */
+  height: 444px;
+  padding-bottom: 1rem;
+  background-color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(
-    -10px
-  ); /* Mueve la tarjeta hacia arriba al pasar el cursor */
+  transform: translateY(-10px);
 }
 
 .projects .card img {
@@ -235,7 +219,7 @@ order: 3;
 .card h4,
 p,
 a {
-  margin: 1rem; /* Añade un poco de espacio debajo del título */
+  margin: 1rem;
 }
 
 h4 {
@@ -243,13 +227,13 @@ h4 {
 }
 .card a {
   font-size: 17px;
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  color: var(--default); /* Usa el color primario para el enlace */
-  transition: color 0.3s ease; /* Añade una transición suave al color del enlace */
+  text-decoration: none;
+  color: var(--default);
+  transition: color 0.3s ease;
 }
 
 .card a:hover {
-  color: var(--hover); /* Cambia el color del enlace al pasar el cursor */
+  color: var(--hover);
 }
 
 .project-cards {
@@ -260,10 +244,10 @@ h4 {
 }
 
 .services {
-      display: flex;
-    gap: 3rem;
-    padding: 8rem 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 3rem;
+  padding: 8rem 2rem;
+  flex-wrap: wrap;
 }
 
 /* Footer */
@@ -327,8 +311,8 @@ h4 {
   nav {
     display: none;
   }
-  header  {
-   justify-content: space-around;
+  header {
+    justify-content: space-around;
   }
 
   .hamburger {
@@ -373,10 +357,10 @@ h4 {
 
   .services {
     flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        padding: 5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem;
   }
   .footer-details {
     display: block;
